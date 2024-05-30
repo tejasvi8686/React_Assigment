@@ -1,13 +1,17 @@
-import React from 'react'
-import Child from './Child/Child'
+import React from "react";
 
-const Border = () => {
+const Border = ({ children }) => {
+  const borderStyle = {
+    border: "2px solid black",
+    padding: "10px",
+    borderRadius: "5px",
+    marginBottom: "20px"
+  };
   return (
     <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti at magni quo magnam dolorum, cumque voluptatibus explicabo similique ad expedita.
-      <Child />
+      <div style={borderStyle}>{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Border
+export default Border;
