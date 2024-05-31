@@ -1,5 +1,6 @@
 import React from "react";
 import "./event.css";
+import {Froms, Fromss} from "./From/From";
 
 const Event = () => {
   const handleMouseOver = (e) => {
@@ -41,7 +42,7 @@ const Event = () => {
   return (
     <div className="container">
       <img
-        src={`https://picsum.photos/id/${5}/100/100`}
+        src={`https://picsum.photos/id/${1}/100/100`}
         alt="Placeholder"
         onMouseOver={handleMouseOver}
         onMouseOut={handleMouseOut}
@@ -60,6 +61,8 @@ const Event = () => {
       >
         Try copying, cutting, or pasting this text.
       </p>
+      <Froms />
+      <Fromss />
     </div>
   );
 };
