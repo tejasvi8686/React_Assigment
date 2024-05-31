@@ -2,6 +2,10 @@ import React from "react";
 import resume from "../../data/resume";
 
 const Resume = () => {
+  const handlePrint = (e) => {
+    window.print();
+    e.stopPropagation();
+  };
   return (
     <div className="resume">
       <h1>{resume.name}</h1>
@@ -18,7 +22,7 @@ const Resume = () => {
       {resume.skills.frameworks.length > 0 && (
         <>
           <h2>FrameWork</h2>
-          <ul >
+          <ul>
             {resume.skills.frameworks.map((framework) => (
               <li key={framework}>{framework}</li>
             ))}
@@ -38,6 +42,7 @@ const Resume = () => {
           <li key={edu}>{edu}</li>
         ))}
       </ul>
+      <button onClick={handlePrint}>Print Resume</button>
     </div>
   );
 };

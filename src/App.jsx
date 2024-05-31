@@ -6,25 +6,32 @@ import List from "./componetns/List/List";
 import Event from "./componetns/EventHandler/Event";
 
 function App() {
+  const handleClick = (e) => {
+    e.stopPropagation();
+  }
+
   const itemss = ["Item 1", "Item 2", "Item 3"];
   return (
-    <Border>
-      {/* <Resume /> */}
-      {/* <Border>
-        <Child />
-      </Border> */}
-      {/* <div>
-        <h2>Numbered List</h2>
-        <List layout="numbered" items={itemss} />
+    <div onClick={() => console.log("app")}>
+      <Border>
+        <Resume />
+        <Border>
+          <Child />
+        </Border>
+        <div>
+          <h2>Numbered List</h2>
+          <List layout="numbered" items={itemss} />
 
-        <h2>Alphabetical List</h2>
-        <List layout="alpha" items={itemss} />
+          <h2>Alphabetical List</h2>
+          <List layout="alpha" items={itemss} />
 
-        <h2>Bullet List</h2>
-        <List layout="bullet" items={itemss} />
-      </div> */}
-      <Event />
-    </Border>
+          <h2>Bullet List</h2>
+          <List layout="bullet" items={itemss} />
+        </div>
+        <Event />
+      </Border>
+      <button onClick={handleClick}>Final</button>
+    </div>
   );
 }
 
