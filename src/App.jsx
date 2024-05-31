@@ -4,6 +4,7 @@ import Child from "./componetns/Border/Child/Child";
 import Resume from "./componetns/Resume/Resume";
 import List from "./componetns/List/List";
 import Event from "./componetns/EventHandler/Event";
+import Counter from "./componetns/Counter/Counter";
 
 function App() {
   const handleClick = (e) => {
@@ -29,6 +30,7 @@ function App() {
           <List layout="bullet" items={itemss} />
         </div>
         <Event />
+        <Counter />
       </Border>
       <button onClick={handleClick}>Final</button>
     </div>
