@@ -8,7 +8,7 @@ function App() {
   const itemss = ['Item 1', 'Item 2', 'Item 3'];
   return (
     <Border>
-      {/* <Resume /> */}
+      <Resume />
       <Border>
         <Child />
       </Border>

@@ -5,18 +5,27 @@ const Resume = () => {
   return (
     <div className="resume">
       <h1>{resume.name}</h1>
-      <h2>Skills</h2>
-      <ul>
-        {resume.skills.programming.map((skill) => (
-          <li key={skill}>{skill}</li>
-        ))}
-      </ul>
-      <h2>FrameWork</h2>
-      <ul>
-        {resume.skills.frameworks.map((framework) => (
-          <li key={framework}>{framework}</li>
-        ))}
-      </ul>
+      {resume.skills?.programming?.length > 0 && (
+        <>
+          <h2>Skills</h2>
+          <ul>
+            {resume.skills.programming.map((skill) => (
+              <li key={skill}>{skill}</li>
+            ))}
+          </ul>
+        </>
+      )}
+      {resume.skills.frameworks.length > 0 && (
+        <>
+          <h2>FrameWork</h2>
+          <ul >
+            {resume.skills.frameworks.map((framework) => (
+              <li key={framework}>{framework}</li>
+            ))}
+          </ul>
+        </>
+      )}
+
       <h2>Experience</h2>
       <ul>
         {resume.experience.map((company) => (
@@ -29,7 +38,6 @@ const Resume = () => {
           <li key={edu}>{edu}</li>
         ))}
       </ul>
-      {/* Add similar sections for projects and education */}
     </div>
   );
 };
